@@ -1,0 +1,30 @@
+import java.util.*;
+
+public class ReverseAlphabetical {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter the word: ");
+        String word = sc.nextLine().toUpperCase();
+
+        char[] arr = word.toCharArray();
+
+        // Sort in reverse alphabetical order
+        for (int i = 0; i < arr.length - 1; i++) {
+            for (int j = i + 1; j < arr.length; j++) {
+                if (arr[i] < arr[j]) {
+                    char temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp;
+                }
+            }
+        }
+
+        System.out.print("Alphabetical Order: ");
+        for (char ch : arr) {
+            System.out.print(ch + " ");
+        }
+
+        sc.close();
+    }
+}

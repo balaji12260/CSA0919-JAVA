@@ -1,0 +1,16 @@
+import java.util.*;
+
+public class StringToInteger {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a number (String): ");
+        String str = sc.nextLine();
+
+        int num = Integer.parseInt(str);   // Convert String to Integer
+
+        System.out.println("Out put String: " + num);
+
+        sc.close();
+    }
+}
